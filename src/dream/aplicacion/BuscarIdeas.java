@@ -29,15 +29,15 @@ import Entidad.Usuario;
 @ManagedBean
 @ViewScoped
 public class BuscarIdeas  {
-	@Setter @Getter private String hashtag;
-	@Setter @Getter private List<Idea> ideas = new ArrayList<>();
-	@Setter @Getter private IdeaDAO ideaDAO = new IdeaDAO();
-	@Setter @Getter private IdeaLikeDAO ideaLikeDAO = new IdeaLikeDAO();
-	@Setter @Getter private MensajeDAO mensajeDAO = new MensajeDAO();
-	@Setter @Getter private int idea_id;
+	private String hashtag;
+	private List<Idea> ideas = new ArrayList<>();
+	private IdeaDAO ideaDAO = new IdeaDAO();
+	private IdeaLikeDAO ideaLikeDAO = new IdeaLikeDAO();
+	private MensajeDAO mensajeDAO = new MensajeDAO();
+	private int idea_id;
 	
-	@Setter @Getter private String descripcion;
-	@Setter @Getter private Usuario usuario;
+	private String descripcion;
+	private Usuario usuario;
 	
 	
 	
@@ -86,6 +86,70 @@ public class BuscarIdeas  {
 		ideaSeguidor.setUsuario(usuario);
 		IdeaSeguidorDAO ideaSeguidorDAO = new IdeaSeguidorDAO();
 		ideaSeguidorDAO.insertar(ideaSeguidor);
+	}
+
+	public String getHashtag() {
+		return hashtag;
+	}
+
+	public void setHashtag(String hashtag) {
+		this.hashtag = hashtag;
+	}
+
+	public List<Idea> getIdeas() {
+		return ideas;
+	}
+
+	public void setIdeas(List<Idea> ideas) {
+		this.ideas = ideas;
+	}
+
+	public IdeaDAO getIdeaDAO() {
+		return ideaDAO;
+	}
+
+	public void setIdeaDAO(IdeaDAO ideaDAO) {
+		this.ideaDAO = ideaDAO;
+	}
+
+	public IdeaLikeDAO getIdeaLikeDAO() {
+		return ideaLikeDAO;
+	}
+
+	public void setIdeaLikeDAO(IdeaLikeDAO ideaLikeDAO) {
+		this.ideaLikeDAO = ideaLikeDAO;
+	}
+
+	public MensajeDAO getMensajeDAO() {
+		return mensajeDAO;
+	}
+
+	public void setMensajeDAO(MensajeDAO mensajeDAO) {
+		this.mensajeDAO = mensajeDAO;
+	}
+
+	public int getIdeaId() {
+		return idea_id;
+	}
+
+	public void setIdeaId(int idea_id) {
+		this.idea_id = idea_id;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
 	
