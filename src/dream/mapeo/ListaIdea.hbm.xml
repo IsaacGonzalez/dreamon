@@ -17,8 +17,9 @@
         <property name="descripcion" type="java.lang.String">
             <column name="descripcion" />
         </property>
-        <many-to-one name="usuario" class="Entidad.Usuario" fetch="join" lazy="false">
+        <many-to-one name="usuario" class="Entidad.Usuario" lazy="false" fetch="join">
             <column name="usuario_id" />
         </many-to-one>
     </class>
 </hibernate-mapping>
+>>>>>>> df3643966961f58893514531e02b4cf865c72790

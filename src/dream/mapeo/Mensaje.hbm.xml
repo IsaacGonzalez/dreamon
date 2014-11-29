@@ -11,10 +11,10 @@
         <property name="descripcion" type="java.lang.String">
             <column name="descripcion" />
         </property>
-        <many-to-one name="usuarioRemitente" class="Entidad.Usuario" >
+        <many-to-one name="usuarioRemitente" class="Entidad.Usuario" lazy="false" >
             <column name="usuario_remitente_id" />
         </many-to-one>
-        <many-to-one name="usuarioDestinatario" class="Entidad.Usuario" >
+        <many-to-one name="usuarioDestinatario" class="Entidad.Usuario" lazy="false" >
             <column name="usuario_destinatario_id" />
         </many-to-one>
         <property name="fechaEnvio" type="java.util.Date" >

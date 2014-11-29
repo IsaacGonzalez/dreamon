@@ -11,7 +11,7 @@
         <property name="descripcion" type="java.lang.String">
             <column name="descripcion" />
         </property>
-        <many-to-one name="listaIdea" class="Entidad.ListaIdea" fetch="join" lazy="false">
+        <many-to-one name="listaIdea" class="Entidad.ListaIdea" lazy="false" fetch="join">
             <column name="lista_ideas_id" />
         </many-to-one>
       <!--          <many-to-one name="categoria" class="Entidad.Categoria" fetch="join" >
