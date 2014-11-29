@@ -7,7 +7,11 @@ import javax.faces.bean.ViewScoped;
 @ViewScoped
 public class Inicio {
 
-	public void doActionHello(){
+	public String doActionHello(){
 		System.out.println("Ouh yeah!");
+		
+		return "";
 	}
+	
+	
 }
