@@ -10,6 +10,12 @@
 		<managed-bean-class>dream.aplicacion.PruebaBean</managed-bean-class>
 		<managed-bean-scope>view</managed-bean-scope>
 	</managed-bean>
+	
+	<managed-bean>
+		<managed-bean-name>administrarLista</managed-bean-name>
+		<managed-bean-class>dream.aplicacion.AdministrarLista</managed-bean-class>
+		<managed-bean-scope>view</managed-bean-scope>
+	</managed-bean>
 
 
 </faces-config>

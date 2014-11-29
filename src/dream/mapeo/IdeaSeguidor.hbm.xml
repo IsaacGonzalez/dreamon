@@ -8,10 +8,10 @@
             <column name="idea_has_seguidores_id" />
             <generator class="increment" />
         </id>
-        <many-to-one name="idea" class="Entidad.Idea" fetch="join">
+        <many-to-one name="idea" class="Entidad.Idea" lazy="false" fetch="join">
             <column name="idea_id" />
         </many-to-one>
-        <many-to-one name="usuario" class="Entidad.Usuario" fetch="join">
+        <many-to-one name="usuario" class="Entidad.Usuario" lazy="false" fetch="join">
             <column name="usuario_id" />
         </many-to-one>
     </class>
