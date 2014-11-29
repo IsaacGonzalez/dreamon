@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+
+	<h:outputStylesheet name="css/material-wfont.min.css" />
+	<h:outputStylesheet name="css/ripples.min.css" />
+	<h:outputStylesheet name="css/bootstrap.min.css" />
+	<h:outputStylesheet name="css/style.css" />
+	<h:outputStylesheet name="css/cloud.css" />
+	<h:outputScript name="js/jquery-1.10.2.min.js"></h:outputScript>
+	<h:outputScript name="js/bootstrap.min.js"></h:outputScript>
+	<h:outputScript name="js/ripples.min.js"></h:outputScript>
+	<h:outputScript name="js/material.min.js"></h:outputScript>
+	<h:outputScript name="js/jquery-1.10.2.min.js"></h:outputScript>
+</h:head>
+
+<h:body>
+<div class="contenido-principal">
+	<div style="position: absolute; z-index: -1;">
+		<div id="clouds">
+			<div class="cloud x1" style="color: black; font-size: 50px;"></div>
+			<!-- Time for multiple clouds to dance around -->
+			<div class="cloud x2"></div>
+			<div class="cloud x3"></div>
+			<div class="cloud x4"></div>
+			<div class="cloud x5"></div>
+		</div>
+	</div>
+	<div class="container-fluid buscador-centro ">
+	<div class="row">
+	<div class="col-lg-12">
+	
+	<div class="texto-principal-buscador">
+	<blockquote class="texto-principal-buscador">"Make something happen"</blockquote></div>
+	</div>
+	</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="bs-component">
+					<div class="jumbotron">
+						<form action="" class="form-horizontal">
+							<div class="row">
+								<div class="col-lg-10">
+									<div class="form-control-wrapper">
+										<input type="text" class="form-control empty col-lg-11"
+											placeholder="e.j. Surfear en arena" />
+									</div>
+								</div>
+								<a href="" class="btn btn-primary col-lg-1"> <i
+									class="mdi-action-search"></i>
+								</a>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+</h:body>
+
+
+
+
+
+<script>
+	$(document).ready(function() {
+		$.material.init();
+	});
+</script>
+</html>

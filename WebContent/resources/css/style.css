@@ -1,0 +1,33 @@
+body{
+	background-color: #5ED2B8;
+	
+    margin: 0 0 100px !important; /* bottom = footer height */s
+}
+
+.contenido-principal{
+	height:100%;
+}
+
+html {
+    position: relative !important;
+    min-height: 100% !important;
+}
+
+
+.buscador-centro{
+	margin:auto;
+margin:200px;
+	margin-left: 120px;
+	margin-right: 120px;
+}
+
+.texto-principal-buscador{
+	text-align: center;
+	color: white;
+	font-size: 48px;
+}
+
+blockquote.texto-principal-buscador{font-size: 48px;
+color: white;
+margin-bottom: 40px;
+}

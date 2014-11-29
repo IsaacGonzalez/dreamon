@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+
+	<h:outputStylesheet name="css/material-wfont.min.css" />
+	<h:outputStylesheet name="css/ripples.min.css" />
+	<h:outputStylesheet name="css/bootstrap.min.css" />
+	<h:outputStylesheet name="css/style.css" />
+	<h:outputStylesheet name="css/cloud.css" />
+	<h:outputScript name="js/jquery-1.10.2.min.js"></h:outputScript>
+	<h:outputScript name="js/bootstrap.min.js"></h:outputScript>
+	<h:outputScript name="js/ripples.min.js"></h:outputScript>
+	<h:outputScript name="js/material.min.js"></h:outputScript>
+	<h:outputScript name="js/jquery-1.10.2.min.js"></h:outputScript>
+</h:head>
+
+<h:body>
+  <div class="container">
+      <div class="row">
+         <div class="col-lg-10 col-lg-offset-1">
+              <h1>Perfil de usuario</h1>
+         </div>
+      </div>
+
+       <div class="row">
+           <div class="col-lg-10 col-lg-offset-1">
+               <div class="bs-component">
+                  <div class="jumbotron">
+
+                      <div class="list-group">
+                        <div class="list-group-item">
+                            <div class="row-picture">
+                                <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon"/>
+                            </div>
+                            <div class="row-content">
+                                <h4 class="list-group-item-heading">John Doe</h4>
+                                <p class="list-group-item-text">Frase quesona del usuario</p>
+                                <p class="list-group-item-text">@johndoe</p>
+
+                            </div>
+                        </div>
+
+                  </div>
+               </div>
+           </div>
+       </div>
+
+      </div>
+
+      <div class="row">
+
+          <div class="col-lg-10 col-lg-offset-1 ">
+                <h1>Listas:</h1>
+                <div class="well">
+                    <h3>Viajes</h3>
+                    <div class="list-group">
+                        <div class="list-group-item">
+                            <div class="row-action-primary checkbox">
+                                <label><input type="checkbox"/></label>
+                            </div>
+                            <div class="row-content">
+                                <h4 class="list-group-item-heading">Tile with a checkbox in it</h4>
+                                <p class="list-group-item-text">Donec id elit non mi risus varius blandit.</p>
+                            </div>
+                        </div>
+                        <div class="list-group-separator"></div>
+                    </div>
+                </div>
+          </div>
+       </div>
+
+    </div>
+
+</h:body>
+
+
+
+
+
+<script>
+	$(document).ready(function() {
+		$.material.init();
+	});
+</script>
+</html>
