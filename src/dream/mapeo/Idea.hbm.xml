@@ -18,8 +18,8 @@
             <column name="categoria_id" />
         </many-to-one>-->
         
-        <property name="estatus" type="int">
-            <column name="estatus" />
+        <property name="cumplida" type="boolean">
+            <column name="cumplida" />
         </property>
 
     </class>
