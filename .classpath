@@ -31,5 +31,10 @@
 	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/DreamOn-Entidad"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/DreamON-Logica"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Lombok">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

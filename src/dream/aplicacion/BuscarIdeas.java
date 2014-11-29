@@ -10,6 +10,7 @@ import javax.faces.bean.ViewScoped;
 import lombok.Getter;
 import lombok.Setter;
 
+import org.apache.catalina.connector.Request;
 import org.hibernate.criterion.LikeExpression;
 
 import dream.dao.IdeaDAO;
@@ -17,7 +18,6 @@ import dream.dao.IdeaLikeDAO;
 import dream.dao.IdeaSeguidorDAO;
 import dream.dao.MensajeDAO;
 import dream.dao.UsuarioDAO;
-
 import Entidad.Hashtag;
 import Entidad.Idea;
 import Entidad.IdeaLike;
@@ -30,7 +30,7 @@ import Entidad.Usuario;
 @ViewScoped
 public class BuscarIdeas  {
 	@Setter @Getter private String hashtag;
-	@Setter @Getter private List<Idea> ideas = new ArrayList<>();
+private List<Idea> ideas = new ArrayList<>();
 	@Setter @Getter private IdeaDAO ideaDAO = new IdeaDAO();
 	@Setter @Getter private IdeaLikeDAO ideaLikeDAO = new IdeaLikeDAO();
 	@Setter @Getter private MensajeDAO mensajeDAO = new MensajeDAO();
@@ -45,10 +45,13 @@ public class BuscarIdeas  {
 	public BuscarIdeas(){
 		UsuarioDAO usuarioDAO = new UsuarioDAO();
 		usuario = usuarioDAO.consultarId(1);
+		hashtag="#mole";
+		doActionBuscarHashtag();
+		
 	}
 	
 	public void doActionBuscarHashtag(){
-		this.ideas = ideaDAO.getIdesPorHashtag(hashtag);
+		this.setIdeas(ideaDAO.getIdesPorHashtag(hashtag));
 	}
 	
 	public void doActionLikeIdea(){
@@ -86,6 +89,14 @@ public class BuscarIdeas  {
 		ideaSeguidor.setUsuario(usuario);
 		IdeaSeguidorDAO ideaSeguidorDAO = new IdeaSeguidorDAO();
 		ideaSeguidorDAO.insertar(ideaSeguidor);
+	}
+
+	public List<Idea> getIdeas() {
+		return ideas;
+	}
+
+	public void setIdeas(List<Idea> ideas) {
+		this.ideas = ideas;
 	}
 
 	

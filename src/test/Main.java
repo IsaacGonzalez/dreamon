@@ -49,7 +49,7 @@ public class Main {
 		
 		IdeaDAO ideaDAO = new IdeaDAO();
 		Idea idea = new Idea();
-		idea.setCategoria(categoria);
+		//idea.setCategoria(categoria);
 		idea.setDescripcion("COMER MOLE");
 		idea.setListaIdea(listadao.consultarId(1));
 		ideaDAO.insertar(idea);
