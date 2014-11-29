@@ -6,7 +6,7 @@
     <class name="Entidad.Hashtag" table="hashtag">
         <id name="id" type="int">
             <column name="hashtag_id" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <property name="nombre" type="java.lang.String">
             <column name="nombre" />

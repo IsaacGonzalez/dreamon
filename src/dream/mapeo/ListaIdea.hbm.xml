@@ -6,7 +6,7 @@
     <class name="Entidad.ListaIdea" table="lista_ideas">
         <id name="id" type="int">
             <column name="lista_ideas_id" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <property name="nombre" type="java.lang.String">
             <column name="nombre" />

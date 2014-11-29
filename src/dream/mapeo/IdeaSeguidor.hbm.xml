@@ -6,7 +6,7 @@
     <class name="Entidad.IdeaSeguidor" table="idea_has_seguidores">
         <id name="id" type="int">
             <column name="idea_has_seguidores_id" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <many-to-one name="idea" class="Entidad.Idea" fetch="join">
             <column name="idea_id" />

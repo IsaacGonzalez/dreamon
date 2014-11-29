@@ -6,7 +6,7 @@
     <class name="Entidad.Usuario" table="usuario">
         <id name="id" type="int">
             <column name="usuario_id" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <property name="nombres" type="java.lang.String">
             <column name="nombre" />
@@ -14,7 +14,7 @@
         <property name="apellidos" type="java.lang.String">
             <column name="apellidos" />
         </property>
-        <property name="usuarioTwitter" type="java.lang.String" access="field">
+        <property name="usuarioTwitter" type="java.lang.String" >
             <column name="usuario_twitter" />
         </property>
         <property name="correo" type="java.lang.String">
