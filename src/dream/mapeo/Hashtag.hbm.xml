@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 29, 2014 9:32:03 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Entidad.Hashtag" table="hashtag">
+        <id name="id" type="int">
+            <column name="hashtag_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="java.lang.String">
+            <column name="nombre" />
+        </property>
+        <many-to-one name="idea" class="Entidad.Idea" fetch="join">
+            <column name="idea_id" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

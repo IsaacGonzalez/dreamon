@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 29, 2014 9:32:03 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Entidad.ListaIdea" table="lista_ideas">
+        <id name="id" type="int">
+            <column name="lista_ideas_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="java.lang.String">
+            <column name="nombre" />
+        </property>
+        <property name="publica" type="boolean">
+            <column name="publica" />
+        </property>
+        <property name="descripcion" type="java.lang.String">
+            <column name="descripcion" />
+        </property>
+        <many-to-one name="usuario" class="Entidad.Usuario" fetch="join">
+            <column name="usuario_id" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
