@@ -17,51 +17,62 @@
 </h:head>
 
 <h:body>
-<div class="contenido-principal">
-	<div style="position: absolute; z-index: -1;">
-		<div id="clouds">
-			<div class="cloud x1" style="color: black; font-size: 50px;"></div>
-			<!-- Time for multiple clouds to dance around -->
-			<div class="cloud x2"></div>
-			<div class="cloud x3"></div>
-			<div class="cloud x4"></div>
-			<div class="cloud x5"></div>
-		</div>
-	</div>
-	<div class="container-fluid buscador-centro ">
-	<div class="row">
-	<div class="col-lg-12">
-	
-	<div class="texto-principal-buscador">
-	<blockquote class="texto-principal-buscador">"Make something happen"</blockquote></div>
-	</div>
-	</div>
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="bs-component">
-					<div class="jumbotron">
-						<form action="" class="form-horizontal">
-							<div class="row">
-								<div class="col-lg-10">
-									<div class="form-control-wrapper">
-										<input type="text" class="form-control empty col-lg-11"
-											placeholder="e.j. Surfear en arena" />
+	<div class="contenido-principal">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<h1>¡Regístrate en Dream On!</h1>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<div class="well">
+						<form class="form-horizontal">
+							<fieldset>
+								<legend>Tus datos</legend>
+								<div class="form-group">
+									<label for="inputEmail" class="col-lg-2 control-label">Email</label>
+									<div class="col-lg-10">
+										<input type="email" class="form-control" id="inputEmail"
+											placeholder="Email" />
 									</div>
 								</div>
-								<a href="" class="btn btn-primary col-lg-1"> <i
-									class="mdi-action-search"></i>
-								</a>
-							</div>
+								<div class="form-group">
+									<label for="inputPassword" class="col-lg-2 control-label">Password</label>
+									<div class="col-lg-10">
+										<input type="password" class="form-control" id="inputPassword"
+											placeholder="Password" />
 
+									</div>
+								</div>
+
+
+								<div class="form-group">
+									<label for="textArea" class="col-lg-2 control-label">Acerca
+										de ti</label>
+									<div class="col-lg-10">
+										<textarea class="form-control" rows="3" id="textArea"></textarea>
+										<span class="help-block">Una breve descripción tuya,
+											quién eres, qué te gusta, etc.</span>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="col-lg-10 col-lg-offset-2">
+										<button class="btn btn-default">Cancel</button>
+										<button type="submit" class="btn btn-primary">Submit</button>
+									</div>
+								</div>
+							</fieldset>
 						</form>
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
-
-</div>
-
 </h:body>
 
 

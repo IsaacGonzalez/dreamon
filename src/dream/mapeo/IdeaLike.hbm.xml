@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 29, 2014 9:41:42 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Entidad.IdeaLike" table="idea_has_likes">
+        <id name="id" type="int">
+            <column name="idea_has_likes_id" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="idea" class="Entidad.Idea" fetch="join">
+            <column name="idea_id" />
+        </many-to-one>
+        <many-to-one name="usuario" class="Entidad.Usuario" fetch="join">
+            <column name="usuario_id" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 29, 2014 9:19:07 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping  package="Entidad.Usuario">
+    <class name="Entidad.Usuario" table="usuario">
+        <id name="id" type="int">
+            <column name="usuario_id" />
+            <generator class="increment" />
+        </id>
+        <property name="nombres" type="java.lang.String">
+            <column name="nombre" />
+        </property>
+        <property name="apellidos" type="java.lang.String">
+            <column name="apellidos" />
+        </property>
+        <property name="usuarioTwitter" type="java.lang.String" >
+            <column name="usuario_twitter" />
+        </property>
+        <property name="correo" type="java.lang.String">
+            <column name="correo" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="password" />
+        </property>
+    </class>
+</hibernate-mapping>

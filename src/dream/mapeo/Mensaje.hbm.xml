@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 29, 2014 9:47:31 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Entidad.Mensaje" table="mensaje">
+        <id name="id" type="int">
+            <column name="mensaje_id" />
+            <generator class="increment" />
+        </id>
+        <property name="descripcion" type="java.lang.String">
+            <column name="descripcion" />
+        </property>
+        <many-to-one name="usuarioRemitente" class="Entidad.Usuario" >
+            <column name="usuario_remitente_id" />
+        </many-to-one>
+        <many-to-one name="usuarioDestinatario" class="Entidad.Usuario" >
+            <column name="usuario_destinatario_id" />
+        </many-to-one>
+        <property name="fechaEnvio" type="java.util.Date" >
+            <column name="fecha_enviado" />
+        </property>
+    </class>
+</hibernate-mapping>

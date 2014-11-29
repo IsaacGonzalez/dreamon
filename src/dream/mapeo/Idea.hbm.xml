@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 29, 2014 9:32:03 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Entidad.Idea" table="idea">
+        <id name="id" type="int">
+            <column name="idea_id" />
+            <generator class="increment" />
+        </id>
+        <property name="descripcion" type="java.lang.String">
+            <column name="descripcion" />
+        </property>
+        <many-to-one name="listaIdea" class="Entidad.ListaIdea" fetch="join">
+            <column name="lista_ideas_id" />
+        </many-to-one>
+      <!--          <many-to-one name="categoria" class="Entidad.Categoria" fetch="join" >
+            <column name="categoria_id" />
+        </many-to-one>-->
+        
+        <property name="cumplida" type="boolean">
+            <column name="cumplida" />
+        </property>
+
+    </class>
+</hibernate-mapping>
