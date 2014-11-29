@@ -14,9 +14,13 @@
         <many-to-one name="listaIdea" class="Entidad.ListaIdea" fetch="join">
             <column name="lista_ideas_id" />
         </many-to-one>
-        <property name="categoria"
-			type="org.hibernate.type.EnumType">
-			<column name="categoria_id" />
-		</property>
+      <!--          <many-to-one name="categoria" class="Entidad.Categoria" fetch="join" >
+            <column name="categoria_id" />
+        </many-to-one>-->
+        
+        <property name="estatus" type="int">
+            <column name="estatus" />
+        </property>
+
     </class>
 </hibernate-mapping>

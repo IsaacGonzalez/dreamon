@@ -17,7 +17,7 @@
         <many-to-one name="usuarioDestinatario" class="Entidad.Usuario" >
             <column name="usuario_destinatario_id" />
         </many-to-one>
-        <property name="fecha_envio" type="java.util.Date" >
+        <property name="fechaEnvio" type="java.util.Date" >
             <column name="fecha_enviado" />
         </property>
     </class>
