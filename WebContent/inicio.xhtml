@@ -1,54 +1,72 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
-    <h:head>
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
 
-    <h:outputStylesheet name="css/material-wfont.min.css" />
-    <h:outputStylesheet name="css/ripples.min.css" />
-    <h:outputStylesheet name="css/bootstrap.min.css" />
-    <h:outputScript name="js/jquery-1.10.2.min.js"></h:outputScript>
-    <h:outputScript name="js/bootstrap.min.js"></h:outputScript>
-    <h:outputScript name="js/ripples.min.js"></h:outputScript>
-    <h:outputScript name="js/material.min.js"></h:outputScript>
-    <h:outputScript name="js/jquery-1.10.2.min.js"></h:outputScript>
-    </h:head>
-      
-	<body>
+	<h:outputStylesheet name="css/material-wfont.min.css" />
+	<h:outputStylesheet name="css/ripples.min.css" />
+	<h:outputStylesheet name="css/bootstrap.min.css" />
+	<h:outputStylesheet name="css/style.css" />
+	<h:outputStylesheet name="css/cloud.css" />
+	<h:outputScript name="js/jquery-1.10.2.min.js"></h:outputScript>
+	<h:outputScript name="js/bootstrap.min.js"></h:outputScript>
+	<h:outputScript name="js/ripples.min.js"></h:outputScript>
+	<h:outputScript name="js/material.min.js"></h:outputScript>
+	<h:outputScript name="js/jquery-1.10.2.min.js"></h:outputScript>
+</h:head>
+
+<h:body>
 	
-		<!-- Your site -->
+  <div class="container-fluid">
+      <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+          <h1 class="texto-principal-buscador">"Make something happen"</h1>
+      </div>
+  </div>
 
-        <h1>You can add your site here.</h1>
-
-        <h2>To ensure that material-design theme is working, check out the buttons below.</h2>
-
-        <h3 class="text-muted">If you can see the ripple effect on clicking them, then you are good to go!</h3>
 
 
-        <p class="bs-component">
-            <a href="javascript:void(0)" class="btn btn-default">Default</a>
-            <a href="javascript:void(0)" class="btn btn-primary">Primary</a>
-            <a href="javascript:void(0)" class="btn btn-success">Success</a>
-            <a href="javascript:void(0)" class="btn btn-info">Info</a>
-            <a href="javascript:void(0)" class="btn btn-warning">Warning</a>
-            <a href="javascript:void(0)" class="btn btn-danger">Danger</a>
-            <a href="javascript:void(0)" class="btn btn-link">Link</a>
-        </p>
 
-        <!-- Your site ends -->
-	
-	
-		
-		
-	</body>
-	
-		
-		
-		
-		
-        <script>
-            $(document).ready(function() {
-                $.material.init();
-            });
-        </script>
+   <div class="row">
+       <div class="col-lg-10 col-lg-offset-1">
+           <div class="bs-component">
+              <div class="jumbotron">
+                <form action="" class="form-horizontal">
+                   <div class="row">
+
+                       <div class="form-group">
+                           <div class="form-control-wrapper col-lg-9 col-lg-offset-1">
+                                <input type="text" class="form-control empty" placeholder="e.j. Surfear en arena" />
+                            </div>
+                            <a href="#" class="btn btn-primary col-lg-1">
+                                <i class="mdi-action-search"></i>
+                            </a>
+                       </div>
+
+                   </div>
+
+                </form>
+              </div>
+           </div>
+       </div>
+   </div>
+  </div>
+
+    <script>
+        $(document).ready(function() {
+            $.material.init();
+        });
+    </script>
+</h:body>
+
+
+
+
+
+<script>
+	$(document).ready(function() {
+		$.material.init();
+	});
+</script>
 </html>
