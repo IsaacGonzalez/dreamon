@@ -36,13 +36,13 @@
                         <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Nombre</label>
                             <div class="col-lg-10">
-                            	<h:inputText styleClass="form-control" id="nombre" placeholder="Nombre"></h:inputText>
+                            	<h:inputText styleClass="form-control" id="nombre"  value="#{administrarLista.listaNombre}" placeholder="Nombre"></h:inputText>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                            <label for="inputPassword" class="col-lg-2 control-label">Descripcion</label>
                             <div class="col-lg-10">
-								<h:inputText styleClass="form-control" id="inputPassword" placeholder="Password"></h:inputText>
+								<h:inputText styleClass="form-control" id="inputPassword" value="#{administrarLista.listaDescripcion}" placeholder="Password"></h:inputText>
                             </div>
                         </div>
 
@@ -52,7 +52,7 @@
                             <div class="col-lg-10">
                                  <div class="checkbox">
 				                    <label>
-				                        <input type="checkbox"> Checkbox </input>
+				                        <input type="checkbox">  </input>
 				                    </label>
 				                </div>
                             </div>
@@ -61,7 +61,7 @@
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
                                 <button class="btn btn-default">Cancel</button>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <h:commandButton action="#{administrarLista.doActionCrearLista}" styleClass="btn btn-primary" value="Crear" />
                             </div>
                         </div>
                     </fieldset>
