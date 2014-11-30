@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dream On!</title>
+
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/ripples.min.css" rel="stylesheet" />
+    <link href="css/material-wfont.min.css" rel="stylesheet" />
+
+</head>
+<body style="background-color: #5ED2B8;">
+
+<h:form >
+   <div class="container">
+
+       <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+              <h1>Iniciar sesión</h1>
+           </div>
+       </div>
+
+       <div class="row">
+           <div class="col-lg-10 offset-lg-1">
+               <div class="well">
+                    <fieldset>
+                        <legend>Tus datos</legend>                         
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                            <div class="col-lg-10">
+                            	<h:inputText value="#{administrarUsuario.correo}" styleClass="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                            <div class="col-lg-10">
+								<h:inputSecret value="#{administrarUsuario.password}" styleClass="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <button class="btn btn-default">Cancel</button>
+                                <h:commandButton action="#{administrarUsuario.doActionIniciarSesion}" 
+                                	value="Iniciar" styleClass="btn btn-primary" >
+                                	<f:ajax event="click" listener="#{administrarUsuario.doActionIniciarSesion}"></f:ajax>
+                                </h:commandButton>
+                            </div>
+                        </div>
+                    </fieldset>
+               </div>
+           </div>
+       </div>
+
+   </div>
+
+
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="js/ripples.min.js"></script>
+    <script src="js/material.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.material.init();
+        });
+    </script>
+
+</h:form >
+</body>
+
+</html>

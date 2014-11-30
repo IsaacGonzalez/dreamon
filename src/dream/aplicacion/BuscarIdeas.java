@@ -3,9 +3,14 @@ package dream.aplicacion;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.RequestScoped;
 import javax.faces.bean.ViewScoped;
+import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpServletResponse;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -17,7 +22,6 @@ import dream.dao.IdeaLikeDAO;
 import dream.dao.IdeaSeguidorDAO;
 import dream.dao.MensajeDAO;
 import dream.dao.UsuarioDAO;
-
 import Entidad.Hashtag;
 import Entidad.Idea;
 import Entidad.IdeaLike;
@@ -27,9 +31,11 @@ import Entidad.Usuario;
 
 
 @ManagedBean
-@ViewScoped
+@RequestScoped
 public class BuscarIdeas  {
+
 	private String hashtag;
+	private String hashtag2;
 	private List<Idea> ideas = new ArrayList<>();
 	private IdeaDAO ideaDAO = new IdeaDAO();
 	private IdeaLikeDAO ideaLikeDAO = new IdeaLikeDAO();
@@ -45,10 +51,16 @@ public class BuscarIdeas  {
 	public BuscarIdeas(){
 		UsuarioDAO usuarioDAO = new UsuarioDAO();
 		usuario = usuarioDAO.consultarId(1);
+		FacesContext context = FacesContext.getCurrentInstance();
+		Map<String, String> requestMap = context.getExternalContext().getRequestParameterMap();
+		String param = requestMap.get("j_idt16");
+		hashtag2="#"+param;
+		doActionBuscarHashtag();
+		
 	}
 	
 	public void doActionBuscarHashtag(){
-		this.ideas = ideaDAO.getIdesPorHashtag(hashtag);
+		this.ideas = ideaDAO.getIdesPorHashtag(hashtag2);
 	}
 	
 	public void doActionLikeIdea(){

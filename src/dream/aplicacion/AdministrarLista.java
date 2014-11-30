@@ -2,6 +2,9 @@ package dream.aplicacion;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
+import javax.faces.context.FacesContext;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,9 +21,7 @@ public class AdministrarLista {
 
 	
 	private int usuario_id;
-	
 	private int lista_id;
-	
 	private String lista_nombre;
 	
 	private String lista_descripcion;
@@ -59,6 +60,9 @@ public class AdministrarLista {
 	
 	private List<Hashtag> hashtags;
 	
+	private boolean agregar_idea = false;
+	private boolean verBoton = false;
+	
 	public AdministrarLista(){
 		usuarioDAO = new UsuarioDAO();
 		listaDAO = new ListaIdeaDAO();
@@ -66,7 +70,15 @@ public class AdministrarLista {
 		hashtagDAO = new HashtagDAO();
 		listas = new ArrayList<ListaIdea>();
 		ideas = new ArrayList<Idea>();
+		FacesContext context = FacesContext.getCurrentInstance();
+		Map<String, String> requestMap = context.getExternalContext().getRequestParameterMap();
+		String param = requestMap.get("beca");
+		int n;
+		try{ n= Integer.valueOf(param);
+		}catch(Exception e){n=0;}
+		lista_id=n;
 		limpiar();
+		cargarListaDeUsuario();
 	}
 	
 	public void limpiar(){
@@ -79,11 +91,11 @@ public class AdministrarLista {
 		hashtag_nombre = "";		
 	}
 	
-	public void doActionCrearLista(){
+	public String doActionCrearLista(){
 		usuario = new Usuario();		
 		lista = new ListaIdea();
 		
-		usuario = usuarioDAO.consultarId(usuario_id);
+		usuario = usuarioDAO.consultarId(1);
 		
 		lista.setNombre(lista_nombre);
 		lista.setDescripcion(lista_descripcion);
@@ -93,6 +105,8 @@ public class AdministrarLista {
 		listaDAO.insertar(lista);
 		cargarListaDeUsuario();
 		limpiar();
+		this.verBoton = true;
+		return "http://localhost:8080/DreamOn/agregar-idea.jsf";
 	}
 	
 	private void cargarListaDeUsuario(){
@@ -118,6 +132,11 @@ public class AdministrarLista {
 		idea.setListaIdea(lista);
 		idea.setCumplida(false);		
 		ideaDAO.insertar(idea);
+		
+		Hashtag hashtag = new Hashtag();
+		hashtag.setIdea(idea);
+		hashtag.setNombre(hashtag_nombre);
+		hashtagDAO.insertar(hashtag);
 		
 		cargarListaDeIdeas();
 		limpiar();
@@ -344,6 +363,31 @@ public class AdministrarLista {
 
 	public void setHashtags(List<Hashtag> hashtags) {
 		this.hashtags = hashtags;
+	}
+
+	public boolean isAgregarIdea() {
+		return agregar_idea;
+	}
+
+	public void setAgregarIdea(boolean agregar_idea) {
+		this.agregar_idea = agregar_idea;
+	}
+	public void doAciontAgregarIdea(){
+		this.agregar_idea = true;
+		ListaIdea lista = listaDAO.getByNombre(lista_nombre);
+		if(lista!=null){
+			this.lista_id  = lista.getId();
+			System.out.println("agregar "+agregar_idea);
+			listas = listaDAO.consultarPorUsuario(usuario_id);
+		}		
+	}
+
+	public boolean isVerBoton() {
+		return verBoton;
+	}
+
+	public void setVerBoton(boolean verBoton) {
+		this.verBoton = verBoton;
 	}
 		
 }

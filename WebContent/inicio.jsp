@@ -2,6 +2,6 @@
 <html>
 	<head></head>
 	<body>
-		<jsp:forward page="inicio.jsf" />
+		<jsp:forward page="iniciar-sesion.jsf" />
 	</body>
 </html>

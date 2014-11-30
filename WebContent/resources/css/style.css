@@ -13,6 +13,13 @@ html {
     min-height: 100% !important;
 }
 
+.pnl-noti {
+	overflow-y: auto;
+	border: none !important;
+	width: 450px !important;
+	height: 300px;
+	border-radius: 0px;
+}
 
 .buscador-centro{
 	margin:auto;
